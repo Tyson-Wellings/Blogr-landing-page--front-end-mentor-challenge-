@@ -217,12 +217,19 @@ nav{
    font-weight: 600;
    position: relative;
    z-index: 9;
-   top: 50px;
+   top: 25px;
    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .light{
     display: none;
+}
+
+.nav-category-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px 0;
 }
 
 .nav-category-title-container{
@@ -231,28 +238,41 @@ nav{
 }
 
 .nav-category-title{
-    display: inline-block;
+    border: none;
+    background-color: white;
+    text-align: center;
+    display: block;
     font-weight: 600;
     font-size: 20px;
     color: var(--Very-dark-blue)
 }
 
+.icon-arrow{
+    position: relative;
+    bottom: 3px;
+    left: 3px;
+}
+
 .category-items{
-    background-color: rgb(218, 218, 218) ;
+    background-color: rgb(218, 218, 218);
     display: none;
     border-radius: 10px;
     padding: 16px 0;
     font-size:  16px;;
+    width: 100%;
+    margin-top: 16px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .nav-links{
     display: block;
     text-align: center;
     padding: 16px 0;
-    color: var(--Very-dark-black-blue)
+    color: var(--Very-dark-grayish-blue)
 }
 
 .login-signup-container{
+    margin-top: 32px;
     padding: 32px 0; 
     display: flex; 
     flex-direction: column;
@@ -270,13 +290,119 @@ nav{
     border-radius: 25px;
 }
 
-#Log-in{
-
-}
 #sign-up {
 
     color: white;
     background: linear-gradient(90deg, hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+}
+
+@media only screen and (min-width: 1008px) {
+
+    header,main{
+        padding: 64px 10%;
+    }
+    h1{
+        font-size: 64px;
+        font-weight: 300;
+        letter-spacing: -2px;
+    }
+
+    #intro-content-wrapper{
+        width: 100%;
+        position: relative; 
+        top: 10%;
+        left: 0; 
+        margin: 0;
+    }
+
+    #intro-content-wrapper p, #intro-content-wrapper h1{
+        margin: 16px 0;
+    }
+
+    #onboarding-buttons-wrapper{
+            width: 350px;
+            margin: 0 auto;
+    }
+
+    #top-of-header{
+        overflow: show;
+        height: 61px;
+    }
+
+    .onboarding-buttons{
+        margin-top: 24px;
+    }
+
+    .hamburger-controls{
+        display: none;
+    }
+
+    nav{
+        display: inline-block;
+        width: calc(100% - 200px);
+        max-height: 52.4px;
+        box-sizing: border-box;
+        box-shadow: none;
+        padding: 0;
+        position: relative;
+        top: -14px;
+        left: 50px;
+        background-color: rgba(100, 100, 111, 0.0);
+        overflow: show;
+    }
+    .light {
+        display: inline-block;
+    }
+
+    .dark{
+        display: none;
+    }
+
+    .nav-category-title{
+        font-size: 16px;
+        color: white;
+        background-color: rgba(100, 100, 111, 0);
+        margin: 0 16px;
+    }
+
+    .nav-category-container{
+        display: inline-block;
+    }
+
+    .login-signup-container{
+        display: inline-block;
+        margin-top: 0;
+        border: none;
+        position: absolute;
+        right: 0;
+        padding: 0;
+    }
+
+    #Log-in{
+        color: white;
+        
+    }
+
+    #sign-up{
+        display: inline-block;
+        width: 150px;
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: 25px;
+        font-size: 16px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        background: white;
+        color: var(--Light-red)
+    }
+
+    .category-items{
+        position: absolute; 
+        width: 200px;
+        background-color: white;
+        
+
+    }
 }
 
 
