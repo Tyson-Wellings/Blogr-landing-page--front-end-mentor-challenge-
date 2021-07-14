@@ -30,28 +30,24 @@ function hamburgerToggle(state){
     
 }
 
-let dropdownState = 0;
+let currentIndex, formerIndex;
 
 function displayDropdown(index){
-    console.log('drop down state was '+ dropdownState)
-    if (dropdownState === 0){
+    currentIndex = index;
+    for (let i=0; i<3; i++){
+        dropdownItems[i].style.display ="none"
+        lightArrows[i].style.transform ="rotate(0deg)"
+        darkArrows[i].style.transform ="rotate(0deg)"
+    }
+
+    if (currentIndex === formerIndex){
+        return
+    }
 
         dropdownItems[index].style.display ="block"
         lightArrows[index].style.transform ="rotate(180deg)"
         darkArrows[index].style.transform ="rotate(180deg)"
-        dropdownState = 1
-        console.log('drop down state is '+ dropdownState)
+        formerIndex = index
         return
-    }
 
-    if(dropdownState === 1){
-        for (let i=0; i<3; i++){
-            dropdownItems[i].style.display ="none"
-            lightArrows[i].style.transform ="rotate(0deg)"
-            darkArrows[i].style.transform ="rotate(0deg)"
-        }
-        dropdownState = 0
-        console.log('drop down state is '+ dropdownState)
-        return
-    }
 }
