@@ -134,6 +134,10 @@ nav{
     text-align: center;
     padding: 100px 0 250px 0;
 }
+
+#designed-for-the-future-wrapper .title{
+    color: var(--Very-dark-blue)
+}
 .decorative-image{
     width: 100%;
 }
@@ -148,7 +152,7 @@ nav{
 }
 
 .copy-wrapper p{
-    line-height: 24px;;
+    line-height: 24px;
     color: var(--Very-dark-grayish-blue)
 }
 
