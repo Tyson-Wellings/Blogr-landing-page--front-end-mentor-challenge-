@@ -6,6 +6,7 @@ let dropdownItems = document.getElementsByClassName('category-items');
 let lightArrows = document.getElementsByClassName('light');
 let darkArrows = document.getElementsByClassName('dark')
 
+
 hamburger.addEventListener ("click", function(){
     hamburgerToggle(0)
 });
@@ -38,12 +39,13 @@ function displayDropdown(index){
         dropdownItems[i].style.display ="none"
         lightArrows[i].style.transform ="rotate(0deg)"
         darkArrows[i].style.transform ="rotate(0deg)"
+        
     }
 
     if (currentIndex === formerIndex){
+        formerIndex = 4;
         return
     }
-
         dropdownItems[index].style.display ="block"
         lightArrows[index].style.transform ="rotate(180deg)"
         darkArrows[index].style.transform ="rotate(180deg)"

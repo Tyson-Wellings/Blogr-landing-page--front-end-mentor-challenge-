@@ -325,6 +325,7 @@ nav{
     }
 
     header{
+        background:  url(images/bg-pattern-intro.svg), linear-gradient(90deg, rgb(255, 143, 112),rgb(255, 61,84));
         background-size: 200%, auto;
         background-repeat:no-repeat;
         background-position: top 53% left 23%, top left;
@@ -381,6 +382,8 @@ nav{
         display: none;
     }
 
+    
+
     .nav-category-title{
         font-size: 16px;
         color: white;
@@ -388,10 +391,27 @@ nav{
         margin: 0 16px;
     }
 
+    .nav-category-title:hover{
+        text-decoration: underline;
+    }
+
     .nav-category-container{
         display: inline-block;
     }
 
+    .category-items{
+        padding: 25px 0 25px 40px;
+        margin-left: -12px
+    }
+
+    .nav-links{
+        text-align: left;
+        font-weight: 300;
+    }
+
+    .nav-links:hover{
+        font-weight: 600
+    }
     .login-signup-container{
         display: inline-block;
         margin-top: 0;
@@ -404,6 +424,10 @@ nav{
     #Log-in{
         color: white;
         
+    }
+
+    #Log-in:hover{
+        text-decoration: underline;
     }
 
     #sign-up{
@@ -419,10 +443,25 @@ nav{
         color: var(--Light-red)
     }
 
+    #sign-up:hover{
+        background: rgba(255,255,255,0.3);
+        color: white;
+    }
+
     .category-items{
         position: absolute; 
         width: 200px;
         background-color: white;
+    }
+
+    #onboarding-buttons-wrapper .white-button:hover{
+        background: rgba(255,255,255,0.3);
+        color: white;
+    }
+
+    #onboarding-buttons-wrapper .outline-button:hover{
+        background: white;
+        color: var(--Light-red)
     }
     #designed-for-the-future-wrapper{
         overflow: hidden;
@@ -474,12 +513,14 @@ nav{
     }
 
     #phone {
-        width: 550px;
-        position: absolute;
+        max-width: 550px;
+        min-width: 200px;
+        position: relative;
         margin: 0;
         grid-area: phone;
-        left: -45px;
-        top: -170px
+        align-self: center;
+        top: 30px;
+
     }
 
     #state-of-the-art-infrastructure-wrapper .copy-wrapper{
@@ -493,11 +534,12 @@ nav{
     }
 
     #state-of-the-art-infrastructure-wrapper{
-        padding: 100px 10%;
+        padding: 7% 10%;
         position: relative;
         height: 200px;
         display: grid;
-        grid-template-columns: 550px auto;
+        grid-template-columns: auto 543px;
+        grid-template-rows: 203.2px;
         grid-template-areas: 
         "phone copy";
         background-position: bottom 20% left -70% ;
@@ -514,6 +556,52 @@ nav{
 
     #state-of-the-art-infrastructure-wrapper p{
         text-align: left;
+    }
+
+    #laptop-section-content{
+        padding: 0;
+        right: 0;
+        grid-area: copy;
+        align-self: center;
+    }
+
+    .laptop{
+        width: 160%;
+        position: relative;
+        grid-area: laptop;
+        left: -68%;
+    }
+
+    #laptop-section-wrapper{
+        display: grid;
+        padding: 100px 10% 0 10%;
+        grid-template-columns: auto 543px;
+        text-align: left;
+        grid-template-areas: 
+        "laptop copy";
+        position: relative;
+    }
+
+    #laptop-section-wrapper h2{
+        margin: 50px 0;
+    }
+
+    #laptop-section-wrapper p{
+        margin: 0 0 50px 0;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5% 20% 5% 10%;
+        
+    }
+
+    footer h3{
+        margin: 0 0 32px 0;
+        
     }
 
 
